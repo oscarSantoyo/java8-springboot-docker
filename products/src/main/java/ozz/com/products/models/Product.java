@@ -45,4 +45,11 @@ public class Product  implements Serializable {
                 ", price=" + price +
                 '}';
     }
+
+    public ozz.com.dto.Product toDto() {
+        return new ozz.com.dto.Product.Builder()
+                .withId(this.getId())
+                .withName(this.getName())
+                .withPrice(this.getPrice()).build();
+    }
 }

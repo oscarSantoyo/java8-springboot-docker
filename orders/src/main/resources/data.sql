@@ -1,0 +1,1 @@
+INSERT INTO order_table (id, name ) VALUES (1, 'Product 1');

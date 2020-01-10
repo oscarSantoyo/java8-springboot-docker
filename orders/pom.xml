@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ozz.com</groupId>
-	<artifactId>products</artifactId>
-	<version>0.0.1</version>
-	<name>products</name>
-	<description>Products example</description>
+	<artifactId>orders</artifactId>
+	<version>1.0</version>
+	<name>orders</name>
+	<description>Orders example</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -20,11 +20,6 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>ozz.com</groupId>
-			<artifactId>contracts</artifactId>
-			<version>1.0</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 		<dependency>
 			<groupId>com.h2database</groupId>
