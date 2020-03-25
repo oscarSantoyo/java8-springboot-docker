@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>ozz.com</groupId>
 	<artifactId>products</artifactId>
-	<version>0.0.1</version>
 	<name>products</name>
+	<version>1.0</version>
 	<description>Products example</description>
 
 	<properties>

@@ -1,4 +1,4 @@
-package ozz.com.products;
+package ozz.com.orders;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

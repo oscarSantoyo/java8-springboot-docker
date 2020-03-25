@@ -1,6 +1,7 @@
 package ozz.com.products;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +18,7 @@ public class Controller {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/products")
+    @GetMapping(value = "/products", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Product> getAll() {
         return productService.getAll();
     }

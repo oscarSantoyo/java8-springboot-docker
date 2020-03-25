@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+external-system:
+  product:
+    url: host.docker.internal:8090
+
+order:
+  mq:
+    url: tcp://host.docker.internal:61616
+    username: admin
+    password: admin
+    queue: message-queue

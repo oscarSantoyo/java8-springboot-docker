@@ -1,0 +1,13 @@
+server:
+  port: 8070
+
+external-system:
+  product:
+    url: localhost:8090
+
+order:
+  mq:
+    url: tcp://localhost:61616
+    username: admin
+    password: admin
+    queue: message-queue
