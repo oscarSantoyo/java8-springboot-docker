@@ -1,4 +1,25 @@
-*** java8-springboot-docker
+* Description
+This project is intended to show how to use and integrate Springboot, Frengine, active-mq, m2Database, Swagger.
 
-- item 1 
-- item 2
+* Projects
+** Products
+Keeps the records of products.
+*** Endpoints:
+- GET `/products` retrieves all the products stored in the database.
+- GET `/products/{productId}` retrieve the id requested from the database.
+** Orders
+Handles the orders management.
+*** Endpoints
+- GET `/orders` retrieves all the orders contained in the database.
+- POST `/orders` creates a new order that is published in `active-mq`
+** Contracts
+Contains the trasnsport objects needed to comunicate between systems (Products, Orders).
+* Run
+- Run ./run-active-mq.sh
+- Go to `products` and run `mvn clean spring-boot:run`
+- Go to `orders` and run `mvn clean spring-boot:run`
+
+* Run with docker
+- Run `sh ./run-active-mq.sh`
+- Go to `products` run `sh ./run-products.sh`
+- Go to `orders` and run `sh ./run-orders.sh`

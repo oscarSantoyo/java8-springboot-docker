@@ -1,14 +1,17 @@
 package ozz.com.orders;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import ozz.com.clients.ProductClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import ozz.com.dto.Order;
-import ozz.com.messaging.impl.MessageStorage;
 import ozz.com.messaging.impl.ProducerMQ;
 import ozz.com.orders.service.OrderService;
-
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
 public class Controller {
@@ -16,17 +19,10 @@ public class Controller {
     private ProducerMQ producerMQ;
 
     @Autowired
-    private MessageStorage messageStorage;
-
-    @Autowired
-    private ProductClient productClient;
-
-    @Autowired
     private OrderService orderService;
 
     @GetMapping(value = "/orders", produces = APPLICATION_JSON_VALUE)
     public Iterable<Order> getAll() {
-        System.out.println(productClient.getAll());
         return orderService.getAll();
     }
 

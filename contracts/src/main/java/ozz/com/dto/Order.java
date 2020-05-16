@@ -7,7 +7,12 @@ import java.io.Serializable;
 @JsonDeserialize(builder = Order.Builder.class)
 public class Order implements Serializable {
 
-    private Long id;
+    /**
+	 * Generaded serialVersionUID
+	 */
+	private static final long serialVersionUID = 3998641627681226955L;
+
+	private Long id;
     private String name;
     private Long productId;
 
