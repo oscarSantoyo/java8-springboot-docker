@@ -1,6 +1,9 @@
 * Description
 This project is intended to show how to use and integrate Springboot, Frengine, active-mq, m2Database, Swagger.
 
+#+ATTR_HTML:
+[[./images/architecture.png]]
+
 * Projects
 ** Products
 Keeps the records of products.
