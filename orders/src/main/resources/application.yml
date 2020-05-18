@@ -11,3 +11,24 @@ order:
     username: admin
     password: admin
     queue: message-queue
+
+new-order:
+  mq:
+    url: tcp://localhost:61616
+    username: admin
+    password: admin
+    queue: new-order
+
+order-updates:
+  mq:
+    url: tcp://localhost:61616
+    username: admin
+    password: admin
+    queue: order-updates
+
+product-sell:
+  mq:
+    url: tcp://localhost:61616
+    username: admin
+    password: admin
+    queue: product-sell

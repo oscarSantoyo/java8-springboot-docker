@@ -7,11 +7,7 @@ import java.io.Serializable;
 @Table
 public class Product  implements Serializable {
 
-    /**
-	 * Generated serialVersionUID
-	 */
-	private static final long serialVersionUID = -2210013300917434904L;
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
